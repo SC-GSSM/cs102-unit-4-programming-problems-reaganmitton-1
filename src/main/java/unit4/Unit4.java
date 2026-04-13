@@ -164,7 +164,7 @@ public class Unit4 {
      */
     public boolean isPalindrome(String str) {
         String backwards = "";
-        for (int i = str.length(); i >= 0; i-- ){
+        for (int i = str.length() - 1; i >= 0; i-- ){
             backwards+= str.substring(i, i+1);
         }
         if (backwards.equals(str)){
