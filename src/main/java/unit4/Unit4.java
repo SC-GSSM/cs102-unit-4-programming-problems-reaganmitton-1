@@ -64,11 +64,11 @@ public class Unit4 {
      */
     public String repeatString(String str, int n) {
         String s = "";
-        if (n == nul || str == ""){
+        if (n == 0 || str == ""){
             return s;
         } else {
             for (int i = 0; i < n; i++){
-                s.append(str);
+                s+=str;
             }
             return s;
         }
@@ -244,7 +244,7 @@ public class Unit4 {
         for (int r = 1; r <= n; r++){
           for (int c = 1; c <= n; c++){
             result = r * c;
-            System.out.println(result + "/t");
+            System.out.print(result + "/t");
           }
           System.out.print("\n");
         }
