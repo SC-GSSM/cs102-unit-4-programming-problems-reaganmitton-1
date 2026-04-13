@@ -29,8 +29,17 @@ public class Unit4 {
      * @return the sum of integers from 1 to n
      */
     public int sumNumbers(int n) {
-        // TODO: Implement this method
-        return 0;
+        
+        int sum = 0;
+        if (n == 0 || n < 0){
+            return 0;
+        } else {
+            for (int i = 1; i < n+1; i++){
+                sum += i;
+            }
+            return sum;
+        }
+        
     }
 
     /**
@@ -54,8 +63,15 @@ public class Unit4 {
      * @return the repeated string
      */
     public String repeatString(String str, int n) {
-        // TODO: Implement this method
-        return "";
+        String s = "";
+        if (n == nul || str == ""){
+            return s;
+        } else {
+            for (int i = 0; i < n; i++){
+                s.append(str);
+            }
+            return s;
+        }
     }
 
     /**
@@ -78,8 +94,12 @@ public class Unit4 {
      * @return the factorial of n
      */
     public int findFactorial(int n) {
-        // TODO: Implement this method
-        return 0;
+        
+        int fact = 1;
+        for (int i = 1; i <= n; i++){
+            fact *= i;
+        }
+        return fact;
     }
 
     /**
@@ -102,8 +122,22 @@ public class Unit4 {
      * @return the number of vowels found
      */
     public int countVowels(String str) {
-        // TODO: Implement this method
-        return 0;
+        int count = 0;
+        String newstr = str.toLowerCase();
+        for (int i = 0; i < str.length(); i++){
+          if (newstr.charAt(i)=='a'){
+            count++;
+          } else if (newstr.charAt(i)=='e'){
+            count++;
+          } else if (newstr.charAt(i)=='i'){
+            count++;
+          } else if (newstr.charAt(i)=='o'){
+            count++;
+          } else if (newstr.charAt(i)=='u'){
+            count++;
+          }
+        }
+        return count;
     }
 
     /**
@@ -129,8 +163,15 @@ public class Unit4 {
      * @return true if the string is a palindrome, false otherwise
      */
     public boolean isPalindrome(String str) {
-        // TODO: Implement this method
-        return false;
+        String backwards = "";
+        for (int i = str.length(); i >= 0; i-- ){
+            backwards+= str.substring(i, i+1);
+        }
+        if (backwards.equals(str)){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -160,7 +201,22 @@ public class Unit4 {
      * @param n the size parameter for the patterns
      */
     public void printAsteriskPatterns(int n) {
-        // TODO: Implement this method
+        for (int i = 0; i < n; i++){
+          System.out.print("*" + "/n");
+        }
+        for (int i = 0; i < n; i++){
+          for (int x = 0; x < n; x++){
+            System.out.print("*" + "/n");
+          }
+        }
+        
+        System.out.println("*");
+        int count = 1;
+        for (int i = 1; i <= n; i++){
+          count *= 1;
+          System.out.print(count);
+          count = 1;
+        }
     }
 
     /**
@@ -184,6 +240,13 @@ public class Unit4 {
      * @param n the size of the table (n x n)
      */
     public void multiplicationTable(int n) {
-        // TODO: Implement this method
+        int result = 1;
+        for (int r = 1; r <= n; r++){
+          for (int c = 1; c <= n; c++){
+            result = r * c;
+            System.out.println(result + "/t");
+          }
+          System.out.print("\n");
+        }
     }
 }
