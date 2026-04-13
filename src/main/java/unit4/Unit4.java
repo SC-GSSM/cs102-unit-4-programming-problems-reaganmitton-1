@@ -202,11 +202,11 @@ public class Unit4 {
      */
     public void printAsteriskPatterns(int n) {
         for (int i = 0; i < n; i++){
-          System.out.print("*" + "/n");
+          System.out.print("*" + "\n");
         }
         for (int i = 0; i < n; i++){
           for (int x = 0; x < n; x++){
-            System.out.print("*" + "/n");
+            System.out.print("*" + "\n");
           }
         }
         
@@ -244,7 +244,7 @@ public class Unit4 {
         for (int r = 1; r <= n; r++){
           for (int c = 1; c <= n; c++){
             result = r * c;
-            System.out.print(result + "/t");
+            System.out.print(result + "\t");
           }
           System.out.print("\n");
         }
